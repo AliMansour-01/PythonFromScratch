@@ -1,67 +1,10 @@
 #Hangman
-
 import random
+from hangman_art import stages
+from hangman_art import logo
+from hangman_words import words_list
 
-
-stages = ['''
-  +---+
-  |   |
-  O   |
- /|\  |
- / \  |
-      |
-=========
-''', '''
-  +---+
-  |   |
-  O   |
- /|\  |
- /    |
-      |
-=========
-''', '''
-  +---+
-  |   |
-  O   |
- /|\  |
-      |
-      |
-=========
-''', '''
-  +---+
-  |   |
-  O   |
- /|   |
-      |
-      |
-=========''', '''
-  +---+
-  |   |
-  O   |
-  |   |
-      |
-      |
-=========
-''', '''
-  +---+
-  |   |
-  O   |
-      |
-      |
-      |
-=========
-''', '''
-  +---+
-  |   |
-      |
-      |
-      |
-      |
-=========
-''']
-
-word_list = ["aardvark", "baboon", "camel"]
-word = random.choice(word_list)
+word = random.choice(words_list)
 
 empty_list = []
 
@@ -69,7 +12,7 @@ for e in range(len(word)):
     empty_list += "_"
 game_over = False
 lives = 6
-
+print(logo)
 while game_over == False:
     guess = input("Guess a letter: ").lower()
     for position in range(len(word)):
