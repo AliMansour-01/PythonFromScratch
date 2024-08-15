@@ -1,6 +1,6 @@
 import random
-from higher_lower_art import logo, VS
-from higher_lower_data import data
+from Higher_lower_art import logo, VS
+from Higher_lower_data import data
 
 
 # Display Art
