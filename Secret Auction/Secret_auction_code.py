@@ -1,7 +1,7 @@
 #python Dictionaries, and Nesting
 
 
-from secret_auction_art import logo
+from Secret_auction_art import logo
 
 print(logo)
 
