@@ -24,6 +24,12 @@ class Snake:
         snake.color("white")
         snake.goto(position)
         self.segments_list.append(snake)
+    def reset(self):
+        for seg in self.segments_list:
+            seg.goto(1000, 1000)
+        self.segments_list.clear()
+        self.snake_body()
+        self.head = self.segments_list[0]
     def extend(self):
         self.add_segment(self.segments_list[-1].position())
     def move(self):
